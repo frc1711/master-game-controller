@@ -4,11 +4,12 @@ import java.io.*;
 
 public class MasterGameController
 {	
-	private static String myHost;
+	
 	public static void main (String[] args)
 	{
 		try
 		{
+			String myHost = "localhost";
 			String hostname = myHost;
 			int port = 7654;
 			
@@ -24,6 +25,7 @@ public class MasterGameController
 			serverOutput.close();
 			serverInput.close();
 			connectionSock.close();
+			
 		}
 		
 		catch (IOException e)
