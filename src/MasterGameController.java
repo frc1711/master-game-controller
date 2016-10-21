@@ -10,11 +10,10 @@ public class MasterGameController
 		try
 		{
 			String myHost = "localhost";
-			String hostname = myHost;
-			int port = 7654;
+			int port = 1711;
 			
 			System.out.println("Connecting to server on port " + port);
-			Socket connectionSock = new Socket(hostname, port);
+			Socket connectionSock = new Socket(myHost, port);
 			
 			BufferedReader serverInput = new BufferedReader(new InputStreamReader(connectionSock.getInputStream()));
 			DataOutputStream serverOutput = new DataOutputStream(connectionSock.getOutputStream());
